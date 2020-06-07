@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import List from "./components/List/List";
 
 function App() {
   return (
@@ -19,6 +20,18 @@ function App() {
           Learn React
         </a>
       </header>
+      <List
+        listTitle="Today"
+        tasks={[
+          {
+            name: "first",
+            list: "completed",
+          },
+        ]}
+        columnTitles={["Complete", "Today", "Task"]}
+        onChangeFirstColumn={() => console.log("first")}
+        onChangeSecondColumn={() => console.log("second")}
+      />
     </div>
   );
 }
